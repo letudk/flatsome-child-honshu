@@ -14,3 +14,7 @@ Version: 3.0
 
 
 }
+
+p.form-row-wide.form-row-last {
+  clear: none !important;
+}
