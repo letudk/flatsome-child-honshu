@@ -76,29 +76,7 @@ function woocommerce_default_address_fields_reorder($fields) {
     $fields['address_1']['priority'] = 135; 	 
     return $fields; 
     }
-add_filter('woocommerce_default_address_fields','woocommerce_default_address_fields_reorder');
-
-/** Remove all possible fields
- **/
-// function wc_remove_checkout_fields( $fields ) {
-
-
-//     // Shipping fields
-//     unset( $fields['shipping']['shipping_company'] );
-//     unset( $fields['shipping']['shipping_phone'] );
-//     unset( $fields['shipping']['shipping_state'] );
-//     unset( $fields['shipping']['shipping_first_name'] );
-//     unset( $fields['shipping']['shipping_last_name'] );
-//     unset( $fields['shipping']['shipping_address_1'] );
-//     unset( $fields['shipping']['shipping_address_2'] );
-//     unset( $fields['shipping']['shipping_city'] );
-//     unset( $fields['shipping']['shipping_postcode'] );
-
-
-//     return $fields;
-// }
-// add_filter( 'woocommerce_checkout_fields', 'wc_remove_checkout_fields' );
-
+add_filter('woocommerce_default_address_fields','woocommerce_default_address_fields_reorder'); 
 
 /*
  * Tùy chỉnh hiển thị thông tin chuyển khoản trong woocommerce
@@ -147,3 +125,4 @@ function devvn_bank_details( $order_id = '' ) {
         echo ob_get_clean();;
     }
 }
+
