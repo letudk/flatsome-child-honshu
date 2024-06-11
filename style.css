@@ -14,7 +14,10 @@ Version: 3.0
 
 
 }
-
+/* css chinh sua trang mac dinh  */
 p.form-row-wide.form-row-last {
   clear: none !important;
 }
+#billing_country_field , .woocommerce-shipping-fields{
+  display: none;
+  }
