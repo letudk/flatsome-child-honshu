@@ -18,9 +18,13 @@ Version: 3.0
 p.form-row-wide.form-row-last {
   clear: none !important;
 }
-#billing_country_field , .woocommerce-shipping-fields, .woocommerce-customer-details {
+#billing_country_field , .woocommerce-shipping-fields {
   display: none !important;
-  }
+}
+
+.woocommerce-customer-details {
+  display: none !important;
+}
 
 #billing_address_1_field{
   width: 100% !important;
