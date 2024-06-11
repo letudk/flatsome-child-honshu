@@ -40,7 +40,16 @@ function nz_edit_cko($fields){
     unset($fields['billing']['billing_city']);
     unset($fields['billing']['billing_email']);
 
-
+     // Shipping fields
+     unset( $fields['shipping']['shipping_company'] );
+     unset( $fields['shipping']['shipping_phone'] );
+     unset( $fields['shipping']['shipping_state'] );
+     unset( $fields['shipping']['shipping_first_name'] );
+     unset( $fields['shipping']['shipping_last_name'] );
+     unset( $fields['shipping']['shipping_address_1'] );
+     unset( $fields['shipping']['shipping_address_2'] );
+     unset( $fields['shipping']['shipping_city'] );
+     unset( $fields['shipping']['shipping_postcode'] );
 
     return $fields;
 }
@@ -55,7 +64,8 @@ Fix - p.form-row-wide.form-row-last {clear: none;}
 function nz_style_checkout($nz_size_cko){ 
 	$nz_size_cko['billing']['billing_first_name']['class'][10] = 'form-row-first';
 	$nz_size_cko['billing']['billing_phone']['class'][20] = 'form-row-last'; 
-	$nz_size_cko['billing']['billing_address_1']['class'] =  array('form-row-wide'); 
+    // $nz_size_cko['billing']['billing_country']['class'] =  array('form-row','form-row-last'); 
+	$nz_size_cko['billing']['billing_address_1']['class']=  array('form-row-wide'); 
 
 	return $nz_size_cko;
 }
@@ -70,24 +80,24 @@ add_filter('woocommerce_default_address_fields','woocommerce_default_address_fie
 
 /** Remove all possible fields
  **/
-function wc_remove_checkout_fields( $fields ) {
+// function wc_remove_checkout_fields( $fields ) {
 
 
-    // Shipping fields
-    unset( $fields['shipping']['shipping_company'] );
-    unset( $fields['shipping']['shipping_phone'] );
-    unset( $fields['shipping']['shipping_state'] );
-    unset( $fields['shipping']['shipping_first_name'] );
-    unset( $fields['shipping']['shipping_last_name'] );
-    unset( $fields['shipping']['shipping_address_1'] );
-    unset( $fields['shipping']['shipping_address_2'] );
-    unset( $fields['shipping']['shipping_city'] );
-    unset( $fields['shipping']['shipping_postcode'] );
+//     // Shipping fields
+//     unset( $fields['shipping']['shipping_company'] );
+//     unset( $fields['shipping']['shipping_phone'] );
+//     unset( $fields['shipping']['shipping_state'] );
+//     unset( $fields['shipping']['shipping_first_name'] );
+//     unset( $fields['shipping']['shipping_last_name'] );
+//     unset( $fields['shipping']['shipping_address_1'] );
+//     unset( $fields['shipping']['shipping_address_2'] );
+//     unset( $fields['shipping']['shipping_city'] );
+//     unset( $fields['shipping']['shipping_postcode'] );
 
 
-    return $fields;
-}
-add_filter( 'woocommerce_checkout_fields', 'wc_remove_checkout_fields' );
+//     return $fields;
+// }
+// add_filter( 'woocommerce_checkout_fields', 'wc_remove_checkout_fields' );
 
 
 /*
