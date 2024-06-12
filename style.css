@@ -31,5 +31,5 @@ p.form-row-wide.form-row-last {
 }
 
 .nav-dark .social-icons .button.is-outline {
-  border-color: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 100%) !important;
 }
