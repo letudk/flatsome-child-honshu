@@ -1,4 +1,7 @@
 <?php
+
+add_filter('use_block_editor_for_post', '__return_false');
+
  
 /*Proceed to Checkout*/
 remove_action( 'woocommerce_proceed_to_checkout', 'woocommerce_button_proceed_to_checkout', 20 ); 
@@ -139,3 +142,4 @@ function my_phpmailer_smtp( $phpmailer ) {
     $phpmailer->From = SMTP_FROM;
     $phpmailer->FromName = SMTP_NAME;
 }
+
