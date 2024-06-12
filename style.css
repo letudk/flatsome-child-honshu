@@ -30,6 +30,6 @@ p.form-row-wide.form-row-last {
   width: 100% !important;
 }
 
-.nav-dark .social-icons .button.is-outline {
+.dark .social-icons .button.is-outline, .nav-dark .social-icons .button.is-outline {
   border-color: hsl(0, 0%, 100%) !important;
 }
