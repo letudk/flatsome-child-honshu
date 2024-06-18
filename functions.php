@@ -143,3 +143,4 @@ function my_phpmailer_smtp( $phpmailer ) {
     $phpmailer->FromName = SMTP_NAME;
 }
 
+add_filter( 'rank_math/sitemap/enable_caching', '__return_false');
